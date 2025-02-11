@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentine's Day Message</title>
+    <style>
+        body {
+            background-color: #ff69b4; /* Pink background */
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .header-box {
+            background-color: white;
+            display: inline-block;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 40px;
+            color: #ff1493; /* Hot pink */
+        }
+
+        .message-box {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .message-box button {
+            background-color: #ff1493; /* Hot pink */
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 18px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .message-box button:hover {
+            background-color: #ff66b2; /* Light pink on hover */
+        }
+
+        .message {
+            display: none;
+            margin-top: 20px;
+            font-size: 24px;
+            color: white;
+            font-weight: bold;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .heart {
+            position: absolute;
+            font-size: 40px;
+            color: red;
+            animation: float 5s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-300px); }
+            100% { transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-box">
+            <h1>HAPPY VALENTINE'S DAY, BABY</h1>
+        </div>
+    </header>
+
+    <div class="message-box">
+        <button onclick="showMessage()">Click to see my message</button>
+        <div id="message" class="message">I love you my chiku ji, gudu ji, sir ji. You are the best, you showed me what love is like, you should be i can be loved. You gave me a reason to live. you are my Jaise banjaare ko ghar 💖</div>
+    </div>
+
+    <script>
+        function showMessage() {
+            document.getElementById('message').style.display = 'block';
+        }
+
+        // Create 10 hearts floating around
+        for (let i = 0; i < 10; i++) {
+            let heart = document.createElement('div');
+            heart.classList.add('heart');
+            heart.innerHTML = '❤️';
+            heart.style.left = Math.random() * window.innerWidth + 'px';
+            heart.style.animationDuration = Math.random() * 3 + 3 + 's';
+            heart.style.fontSize = Math.random() * 30 + 30 + 'px';
+            heart.style.animationDelay = Math.random() * 5 + 's';
+            document.body.appendChild(heart);
+        }
+    </script>
+</body>
+</html>
